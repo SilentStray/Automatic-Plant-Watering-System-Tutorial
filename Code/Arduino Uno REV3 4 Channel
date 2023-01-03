@@ -10,7 +10,7 @@ const int Pin2 = A1;
 const int Pin3 = A2;
 const int Pin4 = A3;
 
-// Define thresholds for each moisture sensor
+// CHANGE ME - Define thresholds for each moisture sensor. This will depend on how moist the soil needs to be for your particular plant.
 float THRESHOLD1 = 750;
 float THRESHOLD2 = 750;
 float THRESHOLD3 = 750;
@@ -31,7 +31,7 @@ void setup() {
   pinMode(Pin3, INPUT);
   pinMode(Pin4, INPUT);
   
-  // Set output pins to high initially
+  // Set output pins to high initially. HIGH = OFF ; LOW = ON
   digitalWrite(IN1, HIGH);
   digitalWrite(IN2, HIGH);
   digitalWrite(IN3, HIGH);
@@ -91,5 +91,5 @@ void loop() {
   }
   
   Serial.println();
-  delay(1000);
+  delay(3600000); //Wait 1 hour before checking the sensors again.
 }
